@@ -22,7 +22,7 @@ public abstract class Product {
     public abstract String use();
 
     //Purchase product
-    public abstract Product purchase(int money);
+    public abstract Product purchase();
 
     public String getName() {
         return name;
@@ -42,9 +42,8 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return "Product: " +
+                "Name: " + name +
+                ", Price: " + price + "kr";
     }
 }

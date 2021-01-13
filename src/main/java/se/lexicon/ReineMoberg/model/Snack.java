@@ -30,17 +30,12 @@ public class Snack extends Product{
     }
 
     @Override
-    public Product purchase(int money) {
-        if(money < getPrice() || getPrice() == 0) {
-            return null;
-        }
-        else {
-            Product purchasedSnack = new Snack(this.getName(), this.getPrice());
-            setName("Empty");
-            setPrice(0);
-            setSugarPercent(0);
-            return purchasedSnack;
-        }
+    public Product purchase() {
+        Product purchasedSnack = new Snack(this.getName(), this.getPrice(),this.getSugarPercent());
+        setName("Empty");
+        setPrice(0);
+        setSugarPercent(0);
+        return purchasedSnack;
     }
 
     public int getSugarPercent() {
@@ -53,8 +48,7 @@ public class Snack extends Product{
 
     @Override
     public String toString() {
-        return "Snack{" +
-                "sugarPercent=" + sugarPercent +
-                "} " + super.toString();
+        return super.toString() +
+                ", Percent sugar: '" + sugarPercent + "%'";
     }
 }

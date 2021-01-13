@@ -30,17 +30,12 @@ public class Food extends Product{
     }
 
     @Override
-    public Product purchase(int money) {
-        if(money < getPrice() || getPrice() == 0) {
-            return null;
-        }
-        else {
-            Product purchasedFood = new Food(this.getName(), this.getPrice());
-            setName("Empty");
-            setPrice(0);
-            setCalories(0);
-            return purchasedFood;
-        }
+    public Product purchase() {
+        Product purchasedFood = new Food(this.getName(), this.getPrice(),this.getCalories());
+        setName("Empty");
+        setPrice(0);
+        setCalories(0);
+        return purchasedFood;
     }
 
     public int getCalories() {
@@ -53,8 +48,7 @@ public class Food extends Product{
 
     @Override
     public String toString() {
-        return "Food{" +
-                "calories=" + calories +
-                "} " + super.toString();
+        return super.toString() +
+                ", Calories: '" + calories + "kcal'";
     }
 }

@@ -30,17 +30,12 @@ public class Drink extends Product{
     }
 
     @Override
-    public Product purchase(int money) {
-        if(money < getPrice() || getPrice() == 0) {
-            return null;
-        }
-        else {
-            Product purchasedDrink = new Drink(this.getName(), this.getPrice());
-            setName("Empty");
-            setPrice(0);
-            setVolume("Undefined");
-            return purchasedDrink;
-        }
+    public Product purchase() {
+        Product purchasedDrink = new Drink(this.getName(), this.getPrice(),this.getVolume());
+        setName("Empty");
+        setPrice(0);
+        setVolume("Undefined");
+        return purchasedDrink;
     }
 
     public String getVolume() {
@@ -53,8 +48,7 @@ public class Drink extends Product{
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "volume='" + volume + '\'' +
-                "} " + super.toString();
+        return super.toString() +
+                ", Volume: " + volume;
     }
 }
