@@ -9,7 +9,7 @@ public interface VendingMachine {
     int returnChange();                         //Return change and reset money pool
     int getBalance();                           //Returns money pool amount
     String getDescription(int productNumber);   //View a product description
-    String[] presentProducts();                 //Returns all product's name and number
+    String[] presentProducts();                 //Returns all product's info and number
     void restockVendingMachine();               //Fills machine with products
 
 }

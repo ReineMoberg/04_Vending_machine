@@ -21,7 +21,7 @@ public abstract class Product {
     //Use or consume product
     public abstract String use();
 
-    //Purchase product
+    //Purchase product. Return purchased product
     public abstract Product purchase();
 
     public String getName() {

@@ -31,7 +31,7 @@ public class Drink extends Product{
 
     @Override
     public Product purchase() {
-        Product purchasedDrink = new Drink(this.getName(), this.getPrice(),this.getVolume());
+        Product purchasedDrink = new Drink(this.getName(), this.getPrice(), this.getVolume());
         setName("Empty");
         setPrice(0);
         setVolume("Undefined");

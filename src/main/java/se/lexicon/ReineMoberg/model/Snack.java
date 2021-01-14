@@ -31,7 +31,7 @@ public class Snack extends Product{
 
     @Override
     public Product purchase() {
-        Product purchasedSnack = new Snack(this.getName(), this.getPrice(),this.getSugarPercent());
+        Product purchasedSnack = new Snack(this.getName(), this.getPrice(), this.getSugarPercent());
         setName("Empty");
         setPrice(0);
         setSugarPercent(0);
@@ -49,6 +49,6 @@ public class Snack extends Product{
     @Override
     public String toString() {
         return super.toString() +
-                ", Percent sugar: '" + sugarPercent + "%'";
+                ", Percent sugar: " + sugarPercent + "%";
     }
 }
