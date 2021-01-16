@@ -55,11 +55,11 @@ public class VendingMachineImpl implements VendingMachine{
     @Override
     public String getDescription(int productNumber) {
         if (productNumber < 1 || productNumber > FULL_VENDING_MACHINE) {
-            return String.valueOf(productNumber) + ". is not a valid product number";
+            return productNumber + ". is not a valid product number";
         } else if (products[productNumber - 1] == null) {
-            return String.valueOf(productNumber) + ". Product is not defined.";
+            return productNumber + ". Product is not defined.";
         } else {
-            return String.valueOf(productNumber) + ". " + products[productNumber - 1].examine();
+            return productNumber + ". " + products[productNumber - 1].examine();
         }
     }
 
@@ -68,9 +68,9 @@ public class VendingMachineImpl implements VendingMachine{
         String[] allProducts = new String[products.length];
         for (int i = 0; i < products.length; i++) {
             if (products[i] == null) {
-                allProducts[i] = String.valueOf(i + 1) + ". Product is not defined.";
+                allProducts[i] = (i + 1) + ". Product is not defined.";
             } else {
-                allProducts[i] = String.valueOf(i + 1) + ". " + products[i].examine();
+                allProducts[i] = (i + 1) + ". " + products[i].examine();
             }
         }
         return allProducts;

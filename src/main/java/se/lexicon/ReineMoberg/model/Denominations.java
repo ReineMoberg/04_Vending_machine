@@ -35,4 +35,9 @@ public enum Denominations {
     public void setValueText(String valueText) {
         this.valueText = valueText;
     }
+
+    @Override
+    public String toString() {
+        return " " + valueText + " ";
+    }
 }
